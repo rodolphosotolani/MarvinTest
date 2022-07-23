@@ -12,9 +12,9 @@ public interface UsuarioService {
 
     Usuario getUsuarioById(Long idUsuario);
 
-    Usuario createUsuario(UsuarioRequest usuarioRequest);
+    Usuario createUsuario(Usuario usuarioNew);
 
-    Usuario updateUsuario(Long idUsuario, UsuarioRequest usuarioRequest);
+    Usuario updateUsuario(Long idUsuario, Usuario usuarioNew);
 
     void deleteUsuario(Long idUsuario);
 }

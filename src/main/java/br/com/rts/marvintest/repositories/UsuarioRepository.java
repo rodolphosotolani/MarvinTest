@@ -1,0 +1,10 @@
+package br.com.rts.marvintest.repositories;
+
+import br.com.rts.marvintest.domains.entity.Usuario;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+
+}

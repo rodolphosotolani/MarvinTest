@@ -16,8 +16,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
-<!--        <springfox-swagger>3.0.0</springfox-swagger>-->
+        <org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
         <lombok-version>1.18.24</lombok-version>
     </properties>
 
@@ -37,11 +36,7 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -72,6 +67,13 @@
             <artifactId>mapstruct</artifactId>
             <version>${org.mapstruct.version}</version>
         </dependency>
+
+        <!--		BANCO DE DADOS -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -85,8 +87,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.mapstruct</groupId>
@@ -97,6 +97,11 @@
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
                             <version>${lombok-version}</version>
+                        </path>
+                        <path>
+                        <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok-mapstruct-binding</artifactId>
+                            <version>0.2.0</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>

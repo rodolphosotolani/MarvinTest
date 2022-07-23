@@ -1,5 +1,6 @@
 package br.com.rts.marvintest.mappers;
 
+import br.com.rts.marvintest.controllers.request.UsuarioRequest;
 import br.com.rts.marvintest.controllers.responses.UsuarioResponse;
 import br.com.rts.marvintest.domains.entity.Usuario;
 import org.mapstruct.Mapper;
@@ -13,4 +14,5 @@ public interface UsuarioMapper {
 
     UsuarioResponse entityToResponse(Usuario usuario);
 
+    Usuario requestToEntity(UsuarioRequest usuarioRequest);
 }
