@@ -25,7 +25,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public Usuario getUsuarioById(Long idUsuario) {
         Optional<Usuario> usuarioOptional = repository.findById(idUsuario);
-        if (usuarioOptional.isEmpty())
+        if (!usuarioOptional.isEmpty())
             return usuarioOptional.get();
 
         return null;
